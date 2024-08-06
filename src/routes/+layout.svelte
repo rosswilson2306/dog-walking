@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.postcss';
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+  import Menu from '$lib/icons/Menu.svelte';
 
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
@@ -14,7 +15,7 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">Skeleton</strong>
+				<strong class="text-xl uppercase">LKWalks Dog Services</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a
@@ -33,6 +34,9 @@
 				>
           Facebook
 				</a>
+        <button type="button" class="" aria-label="Toggle menu">
+          <Menu />
+        </button>
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
