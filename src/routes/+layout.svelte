@@ -9,15 +9,28 @@
 
 	initializeStores();
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+
+	const links = [
+		{ href: '/', label: 'Home' },
+		{ href: '/services', label: 'Services' },
+		{ href: '/prices', label: 'Prices' },
+		{ href: '/contact', label: 'Contact' }
+	];
+
+	// TODO: add social hrefs
+	const socialLinks = [
+		{ href: '/', label: 'Instagram' },
+		{ href: '/', label: 'Facebook' }
+	];
 </script>
 
 <Drawer zIndex="z-[100]">
-	<DrawerContent />
+	<DrawerContent mainNavLinks={links} {socialLinks} />
 </Drawer>
 
 <AppShell>
 	<svelte:fragment slot="header">
-		<Navbar />
+		<Navbar mainNavLinks={links} {socialLinks} />
 	</svelte:fragment>
 	<!-- Page Route Content -->
 	<slot />

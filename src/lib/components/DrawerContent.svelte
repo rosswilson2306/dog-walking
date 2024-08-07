@@ -4,26 +4,18 @@
 	import Instagram from '$lib/icons/instagram.svelte';
 	import { twMerge } from 'tailwind-merge';
 
+  export let mainNavLinks;
+  export let socialLinks;
+
 	$: classesActive = (href: string) =>
 		href === $page.url.pathname ? '!variant-filled-secondary' : '';
 
-	const links = [
-		{ href: '/', label: 'Home' },
-		{ href: '/services', label: 'Services' },
-		{ href: '/prices', label: 'Prices' },
-		{ href: '/contact', label: 'Contact' }
-	];
-
-	const socialLinks = [
-		{ href: '/', label: 'Instagram' },
-		{ href: '/', label: 'Facebook' }
-	];
 </script>
 
 <div class="flex flex-col justify-between h-full p-8">
 	<nav class="list-nav w-full">
 		<ul class="list">
-			{#each links as { href, label }}
+			{#each mainNavLinks as { href, label }}
 				<li class="w-full">
 					<span class="w-full">
 						<a {href} class={twMerge('w-full', classesActive(href))}>{label}</a>
