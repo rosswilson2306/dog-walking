@@ -1,7 +1,7 @@
 <script>
-  import { twMerge } from 'tailwind-merge';
+	import { twMerge } from 'tailwind-merge';
 
-	export let classes;
+	export let classes = '';
 </script>
 
 <h1 class={twMerge('text-center text-4xl mb-4 tracking-wider', classes)}>

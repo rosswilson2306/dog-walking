@@ -4,8 +4,8 @@
 </script>
 
 <Hero />
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-10 text-center flex flex-col items-center">
+<div class="container py-32 mx-auto flex justify-center items-center">
+	<div class="space-y-4 text-center flex flex-col items-center">
 		<HomeDetails />
 	</div>
 </div>
